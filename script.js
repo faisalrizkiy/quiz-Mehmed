@@ -9,8 +9,8 @@
 //    lewat SQL Editor di dashboard Supabase-mu untuk membuat
 //    tabel "leaderboard" beserta izin aksesnya.
 // =========================================================
-const SUPABASE_URL = "https://qogvmjnxmbwyzfkrfvie.supabase.co";
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFvZ3Ztam54bWJ3eXpma3JmdmllIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ4ODY3MzMsImV4cCI6MjEwMDQ2MjczM30.1r3B4_0RzRhFUBBM33bKeWh2eb-gfw0gqngLyBiwuRE";
+const SUPABASE_URL = "https://xiqmmhppxdrngrzefvms.supabase.co";
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhpcW1taHBweGRybmdyemVmdm1zIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU2NjA4NTcsImV4cCI6MjEwMTIzNjg1N30.JkJbpXdgPmzQSvLOaLZQ3zk2TmVhUc8Ky0MBfOMtCqs";
 
 let db = null;
 try {
