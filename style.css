@@ -723,6 +723,118 @@ button:focus-visible {
 }
 
 /* =========================================================
+   ADMIN PANEL
+========================================================= */
+.adminPanelWide {
+    max-width: 480px;
+}
+
+#adminLogin input#adminPass,
+#adminPanel input#searchName {
+    padding: 13px 14px;
+    width: 100%;
+    border-radius: var(--radius-md);
+    border: 2px solid var(--line);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background: var(--surface);
+    color: var(--ink);
+    margin: 10px 0 4px;
+}
+
+#adminLogin input#adminPass:focus-visible,
+#adminPanel input#searchName:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 1px;
+    border-color: var(--gold);
+}
+
+.adminError {
+    color: var(--wrong);
+    font-size: 0.85rem;
+    margin: 4px 0 0;
+}
+
+.adminStats {
+    display: flex;
+    gap: 8px;
+    margin: 14px 0 4px;
+}
+
+.statBox {
+    flex: 1;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 12px 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.statNum {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--ink);
+}
+
+.statLabel {
+    font-size: 0.68rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+#adminList {
+    text-align: left;
+    margin-top: 10px;
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+#adminList .adminRow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 14px;
+    margin: 7px 0;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    font-weight: 500;
+}
+
+#adminList .adminRow .name {
+    flex: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#adminList .adminDate {
+    flex: 1;
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-align: center;
+    white-space: nowrap;
+}
+
+#adminList .adminRow .score {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-align: right;
+    min-width: 32px;
+}
+
+#adminList .empty {
+    color: var(--muted);
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* =========================================================
    SMALL SCREENS
 ========================================================= */
 @media (max-width: 360px) {
