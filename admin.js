@@ -7,7 +7,7 @@
 // public dan siapa pun yang buka DevTools tetap bisa query tabel
 // leaderboard langsung. Untuk proteksi yang beneran kuat, perlu
 // Supabase Auth + Row Level Security (RLS) di sisi database.
-const ADMIN_PASSWORD = "GANTI_PASSWORD_INI";
+const ADMIN_PASSWORD = "Mehmed233*";
 
 // =========================================================
 // SUPABASE (pakai config yang sama dengan script.js)
