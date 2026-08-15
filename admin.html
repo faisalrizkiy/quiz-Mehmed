@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin — Quiz by Mehmed</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="wrapper">
+
+    <!-- LOGIN ADMIN -->
+    <section class="container" id="adminLogin">
+        <span class="eyebrow">Area Terbatas</span>
+        <h2>Admin Login</h2>
+        <p class="subtitle">Masuk untuk melihat semua pemain &amp; skor.</p>
+        <label class="visually-hidden" for="adminPass">Password admin</label>
+        <input id="adminPass" type="password" placeholder="Masukkan password" autocomplete="off">
+        <p id="loginError" class="adminError hidden">Password salah, coba lagi.</p>
+        <div class="menuActions">
+            <button class="btnPrimary" onclick="tryLogin()">Masuk</button>
+            <button class="btnGhost" onclick="window.location.href='index.html'">Kembali ke Quiz</button>
+        </div>
+    </section>
+
+    <!-- PANEL ADMIN -->
+    <section class="container hidden adminPanelWide" id="adminPanel">
+        <span class="eyebrow">Admin Panel</span>
+        <h2>Semua Pemain &amp; Skor</h2>
+
+        <div class="adminStats" id="adminStats"></div>
+
+        <label class="visually-hidden" for="searchName">Cari nama</label>
+        <input id="searchName" placeholder="Cari nama pemain..." autocomplete="off" oninput="renderRows()">
+
+        <div id="adminList"></div>
+
+        <div class="menuActions">
+            <button class="btnPrimary" onclick="loadAllScores()">Refresh</button>
+            <button class="btnGhost" onclick="logout()">Keluar</button>
+        </div>
+    </section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="admin.js"></script>
+</body>
+</html>
