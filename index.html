@@ -1,47 +1,65 @@
+```html
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Quiz — by Mehmed</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div id="openingScreen">
     <div class="openingContent">
         <span class="openingEyebrow">Welcome</span>
         <h1>Quiz by Mehmed</h1>
-        <div class="loadingBar"><span class="loadingBarFill"></span></div>
-        <span class="loadingLabel">Memuat<span class="loadingDots"><i></i><i></i><i></i></span></span>
+        <div class="loadingBar">
+            <span class="loadingBarFill"></span>
+        </div>
+        <span class="loadingLabel">
+            Loading<span class="loadingDots"><i></i><i></i><i></i></span>
+        </span>
     </div>
 </div>
 
 <div id="wrapper">
 
-    <button id="musicBtn" aria-label="Nyalakan / matikan musik" onclick="toggleMusic()">🔊</button>
+    <button id="musicBtn" aria-label="Toggle background music" onclick="toggleMusic()">🔊</button>
 
-    <!-- MENU AWAL -->
+    <!-- MAIN MENU -->
     <section class="container startAnim" id="startMenu">
-        <img src="assets/foto.jpg" class="profilePic" alt="Foto profil pembuat kuis">
+        <img src="assets/foto.jpg" class="profilePic" alt="Quiz creator's profile picture">
+
         <span class="eyebrow">Quiz · by Mehmed</span>
-        <p class="subtitle">TES TES DULU!!! 😜</p>
+        <p class="subtitle">LET'S TEST YOUR KNOWLEDGE!!! 😜</p>
+
         <div class="menuActions">
             <button class="btnPrimary" onclick="goToName()">Play</button>
             <button class="btnGhost" onclick="openLeaderboard()">LEADERBOARD</button>
         </div>
     </section>
 
-    <!-- INPUT NAMA -->
+    <!-- NAME INPUT -->
     <section class="container hidden pageAnim" id="nameBox">
-        <span class="eyebrow">Langkah 1 dari 2</span>
+        <span class="eyebrow">Step 1 of 2</span>
         <h2>What's your name?</h2>
-        <p class="subtitle">Nama ini akan muncul di papan skor.</p>
-        <label class="visually-hidden" for="playerName">Nama pemain</label>
-        <input id="playerName" placeholder="Tulis nama kamu di sini" autocomplete="off" maxlength="20">
+        <p class="subtitle">Your name will appear on the leaderboard.</p>
+
+        <label class="visually-hidden" for="playerName">Player name</label>
+
+        <input
+            id="playerName"
+            placeholder="Enter your name here"
+            autocomplete="off"
+            maxlength="20"
+        >
+
         <div class="menuActions">
             <button class="btnPrimary" onclick="startGame()">Play</button>
             <button class="btnGhost" onclick="backToMenu()">Back</button>
@@ -54,21 +72,26 @@
             <h2>Quiz</h2>
             <div id="progressDots" class="progressDots" aria-hidden="true"></div>
         </div>
+
         <div id="quiz" aria-live="polite"></div>
+
         <div class="menuActions">
-            <button id="restartBtn" class="btnPrimary hidden" onclick="startGame()">Main Lagi</button>
-            <button id="quizLeaderBtn" class="btnGhost hidden" onclick="openLeaderboard()">Papan Skor</button>
+            <button id="restartBtn" class="btnPrimary hidden" onclick="startGame()">Play Again</button>
+            <button id="quizLeaderBtn" class="btnGhost hidden" onclick="openLeaderboard()">Leaderboard</button>
         </div>
     </section>
 
     <!-- LEADERBOARD -->
     <section class="container hidden pageAnim" id="leaderboard">
-        <img src="assets/foto.jpg" class="profilePic" alt="Foto profil pembuat kuis">
-        <span class="eyebrow">20 skor teratas</span>
+        <img src="assets/foto.jpg" class="profilePic" alt="Quiz creator's profile picture">
+
+        <span class="eyebrow">Top 20 Scores</span>
         <h2>LEADERBOARD</h2>
+
         <div id="leaderList"></div>
+
         <div class="menuActions">
-            <button class="btnGhost" onclick="backToMenu()">Kembali ke Menu</button>
+            <button class="btnGhost" onclick="backToMenu()">Back to Menu</button>
         </div>
     </section>
 
@@ -80,5 +103,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
+```
